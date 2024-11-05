@@ -9,6 +9,8 @@ import ImageLinkForm from './component/ImageLinkForm/ImageLinkForm'
 import FaceRecognition from './component/FaceRecognition/FaceRecognition'
 //背景套件
 import ParticlesBg from 'particles-bg'
+//部署在Node環境未內建fetch 函數
+const fetch= require('node-fetch')
 
 //設定初始狀態變數,才可以在每次登出後將狀態回歸原貌
 const initialState = {
