@@ -54,7 +54,7 @@ class App extends Component{
   //圖片網址submit事件:顯示照片、載入人臉辨識(API)
   onSubmit = () => {
     this.setState({imageUrl:this.state.inputUrl})
-    fetch('https://facerecognition-ay0j.onrender.com/imageurl',{
+    fetch('https://facerecogntionbrain-server.onrender.com/imageurl',{
           method:'post',
           headers:{'Content-Type':'application/json'},
           body:JSON.stringify({
@@ -65,7 +65,7 @@ class App extends Component{
     .then(data=>{
       this.showBoundingBox(this.boundingBox(data))
       if(data){
-      fetch('https://facerecognition-ay0j.onrender.com/image',{
+      fetch('https://facerecogntionbrain-server.onrender.com/image',{
         method:'put',
         headers:{'Content-Type':'application/json'},
         body:JSON.stringify({
