@@ -18,7 +18,7 @@ class Signin extends Component{
     //按下submit觸發的路由->/signin 核對使用者信箱密碼是否正確
     //使用fetch預設是用GET所以要重新設定方法
     onSubitSignIn=()=>{
-        fetch('https://facerecognition-ay0j.onrender.com/signin',{
+        fetch('https://facerecogntionbrain-server.onrender.com/signin',{
             method:'post',
             headers:{'Content-Type':'application/json'},
             body:JSON.stringify({
